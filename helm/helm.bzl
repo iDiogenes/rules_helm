@@ -1,8 +1,8 @@
 """Helm rules"""
 
 load("//helm/private:helm_install.bzl", "helm_install", "helm_push", "helm_reinstall", "helm_uninstall")
-load("//helm/private:helm_registry.bzl", "helm_push_registry")
 load("//helm/private:helm_package.bzl", "helm_package")
+load("//helm/private:helm_registry.bzl", "helm_push_registry")
 
 def helm_chart(name, images = [], deps = None, tags = [], install_name = None, **kwargs):
     """Rules for producing a helm package and some convenience targets.

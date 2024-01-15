@@ -69,10 +69,6 @@ load(
     _helm_uninstall = "helm_uninstall",
 )
 load(
-    "//helm/private:helm_registry.bzl",
-    _helm_push_registry = "helm_push_registry",
-)
-load(
     "//helm/private:helm_lint.bzl",
     _helm_lint_aspect = "helm_lint_aspect",
     _helm_lint_test = "helm_lint_test",
@@ -80,6 +76,10 @@ load(
 load(
     "//helm/private:helm_package.bzl",
     _helm_package = "helm_package",
+)
+load(
+    "//helm/private:helm_registry.bzl",
+    _helm_push_registry = "helm_push_registry",
 )
 load(
     ":helm.bzl",
